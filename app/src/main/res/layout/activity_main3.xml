@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NavbarActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navbar_nav" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_above="@id/coordinatorLayout"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_anchor="@id/bottomAppBar"
+        app:maxImageSize="70dp"
+        app:tint="@color/ijo1" >
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="-16dp"
+        >
+        <!--            android:backgroundTint="@color/white">-->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/navbar"
+            app:elevation="0dp"
+            app:itemIconSize="27dp"
+            app:itemIconTint="@color/ijo1"
+            app:itemTextColor="@color/ijo1"
+            app:menu="@menu/bottom_nav_menu2"/>
+
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+<!-- FEREN'S NOTE, BUAT TAMPILIN DATA FROM INTERNET -->
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:tools="http://schemas.android.com/tools"-->
+<!--        android:id="@+id/overviewFragment"-->
+<!--        android:name="com.yln.laundrylab.overview.OverviewFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:layout="@layout/fragment_overview" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/firstFragment"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Home"-->
+<!--        android:textColor="#43a047"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="italic|bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<RelativeLayout
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginTop="40dp">
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="31dp"
+        android:layout_height="33dp"
+        android:contentDescription="@string/todo2"
+        app:srcCompat="@drawable/pin_maps"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="29dp"
+        tools:ignore="MissingConstraints" />
+    <Spinner
+        android:layout_marginTop="1dp"
+        android:backgroundTint="@color/ijo1"
+        android:padding="5dp"
+        android:id="@+id/spinnerLokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageView5"
+        android:defaultFocusHighlightEnabled="true"
+        android:entries="@array/lokasi"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="150dp"
+        android:layout_toRightOf="@id/spinnerLokasi"
+        android:contentDescription="@string/todo3"
+        android:onClick="keprofil"
+        app:srcCompat="@drawable/ic_profile"
+        app:tint="@color/ijo1"
+        tools:layout_editor_absoluteX="347dp"
+        tools:layout_editor_absoluteY="29dp"/>
+</RelativeLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_below="@id/header"
+    android:id="@+id/slider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<RelativeLayout
+    android:id="@+id/kategori"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/slider"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="30dp">
+
+    <TextView
+        android:id="@+id/titleKategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Kategori"
+        android:textColor="@color/ijo1"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/kategoriCuci"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleKategori"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriCuci"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Cuci"
+        android:textColor="@color/ijo1" />
+
+    <ImageView
+        android:id="@+id/kategoriSetrika"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleKategori"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@id/kategoriCuci"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriCuci"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="5dp"
+        android:text="Setrika"
+        android:textColor="@color/ijo1" />
+
+    <ImageView
+        android:id="@+id/kategoriCuciSetrika"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleKategori"
+        android:layout_toRightOf="@id/kategoriSetrika"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriCuci"
+        android:layout_marginLeft="262dp"
+        android:layout_marginTop="4dp"
+        android:text="Cuci Setrika"
+        android:textColor="@color/ijo1" />
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/cuciLagi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/kategori"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="30dp">
+
+    <TextView
+        android:id="@+id/titleCuciKategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Cuci Lagi"
+        android:textColor="@color/ijo1"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/kategoriCuci2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleCuciKategori"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriCuci2"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Cuci"
+        android:textColor="@color/ijo1" />
+
+    <ImageView
+        android:id="@+id/kategoriSetrika2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleCuciKategori"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@id/kategoriCuci2"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriCuci2"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="5dp"
+        android:text="Setrika"
+        android:textColor="@color/ijo1" />
+
+    <ImageView
+        android:id="@+id/kategoriCuciSetrika2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleCuciKategori"
+        android:layout_toRightOf="@id/kategoriSetrika2"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriCuci2"
+        android:layout_marginLeft="262dp"
+        android:layout_marginTop="4dp"
+        android:text="Cuci Setrika"
+        android:textColor="@color/ijo1" />
+</RelativeLayout>
+<TextView
+    android:id="@+id/tvToko"
+    android:layout_below="@id/cuciLagi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Toko"
+    android:textColor="@color/ijo1"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:fontFamily="@font/montserrat_bold"
+    android:layout_marginStart="40dp"/>
+<Spinner
+    android:layout_below="@+id/cuciLagi"
+    android:backgroundTint="@color/ijo1"
+    android:padding="5dp"
+    android:id="@+id/spinnerFilter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/tvToko"
+    android:defaultFocusHighlightEnabled="true"
+    android:entries="@array/filter"
+    android:layout_marginLeft="200dp"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView8"-->
+<!--        android:layout_below="@id/imageView5"-->
+<!--        android:layout_width="255dp"-->
+<!--        android:layout_height="171dp"-->
+<!--        app:srcCompat="@drawable/iklan1"-->
+<!--        tools:layout_editor_absoluteX="30dp"-->
+<!--        tools:layout_editor_absoluteY="118dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <TextView
+        android:id="@+id/firebaseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="siapa?"
+        android:textColor="@color/ijo1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/tvgetdata"
+        android:layout_below="@id/tvToko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Promotion"
+        android:textColor="@color/ijo1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:onClick="kegetdata"
+        android:layout_marginStart="40dp"/>
+
+
+
+</RelativeLayout>

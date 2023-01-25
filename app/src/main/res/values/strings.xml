@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">LaundryLab</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="LaundryLab">LaundryLab</string>
+    <string name="Masuk">MASUK</string>
+    <string name="Nama">Nama</string>
+    <string name="KonfrimPassword">Konfirmasi Password</string>
+    <string name="Email">Email</string>
+    <string name="KataSandi">Kata Sandi</string>
+    <string name="belumakun">Belum punya akun?</string>
+    <string name="sudahakun">Sudah punya akun?</string>
+    <string name="pilih">Pilih Lokasi</string>
+
+    <string name="Register">REGISTER</string>
+    <string name="todo">TODO</string>
+    <string name="TODO">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string-array name="lokasi">
+        <item>Sigunggung</item>
+        <item>Panam</item>
+    </string-array>
+    <string-array name="filter">
+        <item>Sigunggung</item>
+        <item>Panam</item>
+    </string-array>
+</resources>

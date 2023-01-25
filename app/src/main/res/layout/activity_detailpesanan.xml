@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/left"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        app:tint="@color/ijo1"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgBack"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="50dp">
+    <TextView
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/ijo1"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Pesanan"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_below="@id/imgBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:paddingTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:clipToOutline="true"
+        android:background="@drawable/border">
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat Antar-Jemput"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+
+        <TextView
+            android:id="@+id/tvAlamat2"
+            android:layout_below="@+id/tvAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jl. Rowosari no. 1, Kos Belakang Budet"
+            android:textSize="14dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+        <TextView
+            android:id="@+id/titleCuciKategori"
+            android:layout_below="@+id/tvAlamat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Kategori"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+
+        <TextView
+            android:id="@+id/tvKategori2"
+            android:layout_below="@+id/titleCuciKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuci Setrika"
+            android:textSize="14dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+        <TextView
+            android:id="@+id/tvToko"
+            android:layout_below="@+id/tvKategori2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Toko"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+
+        <TextView
+            android:id="@+id/tvToko2"
+            android:layout_below="@+id/tvToko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plaza Laundry"
+            android:textSize="14dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:layout_below="@+id/tvToko2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tanggal dan Waktu"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+
+        <TextView
+            android:id="@+id/tvTanggal2"
+            android:layout_below="@+id/tvTanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumat, 7 Agustus 2022"
+            android:textSize="14dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+        <TextView
+            android:id="@+id/tvTanggal3"
+            android:layout_below="@+id/tvTanggal2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15.00"
+            android:textSize="14dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+        <TextView
+            android:id="@+id/tvCatatan"
+            android:layout_below="@+id/tvTanggal3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Catatan"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+
+        <TextView
+            android:id="@+id/tvCatatan2"
+            android:layout_below="@+id/tvCatatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kalau belum ada yng bisa dihubungi, ambil di depan kos dekat rak sepatu"
+            android:textSize="14dp"
+            android:textColor="@color/ijo1"
+            android:fontFamily="@font/montserrat"/>
+    </RelativeLayout>
+    <Button
+        android:layout_below="@id/container"
+        android:layout_width="250dp"
+        android:background="@drawable/rounded"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:text="JADWALKAN"
+        android:textStyle="bold"
+        />
+</RelativeLayout>
